@@ -6,16 +6,12 @@ import json
 import subprocess
 import requests
 
-headers = {
-    'X-Request-Type': 'testing'
-}
-
 argv = sys.argv
 
 def download_file(url):
     # HTTPリクエストを送信
     try:
-        response = requests.get(url, stream=True, headers=headers)
+        response = requests.get(url, stream=True,)
     except Exception as e:
         print(f"リクエスト中にエラーが発生しました: {e}")
         return None
